@@ -6,7 +6,7 @@ const useStyles = createUseStyles({
   },
 
   inputContainer: {
-    borderRadius: 6,
+    borderRadius: 8,
     border: "1px solid #eee",
     width: 300,
     padding: 12,
@@ -50,13 +50,13 @@ const useStyles = createUseStyles({
 
   activeMenuItem: {
     background: "#f2f4ff",
-    color: "#838fc3",
+    color: "#6B7DCE",
     fontWeight: "bold",
     marginBottom: 8,
   },
   activeInput: {
-    border: "1px solid #919fde",
-    outline: "2px solid #d8e1fd",
+    border: "2px solid #6B7DCE",
+    outline: "3px solid #d8e1fd",
   },
   svgIcon: {
     position: "absolute",

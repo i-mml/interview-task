@@ -87,7 +87,7 @@ const Dropdown = ({ placeholder = "select..." }: Props) => {
                   xmlns="http://www.w3.org/2000/svg"
                   width="23"
                   height="23"
-                  fill="#838fc3"
+                  fill="#6B7DCE"
                   viewBox="0 0 16 16"
                   className={classes.svgIcon}
                 >
