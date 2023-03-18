@@ -1,4 +1,4 @@
-import { createUseStyles } from "react-jss";
+import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
   wrapper: {
@@ -43,6 +43,9 @@ const useStyles = createUseStyles({
     padding: "6px 24px",
     cursor: "pointer",
     borderRadius: 4,
+    "&:hover": {
+      background: "#f2f4ff",
+    },
   },
 
   activeMenuItem: {
@@ -50,6 +53,14 @@ const useStyles = createUseStyles({
     color: "#838fc3",
     fontWeight: "bold",
     marginBottom: 8,
+  },
+  activeInput: {
+    border: "1px solid #919fde",
+    outline: "2px solid #d8e1fd",
+  },
+  svgIcon: {
+    position: "absolute",
+    right: "15px",
   },
 });
 

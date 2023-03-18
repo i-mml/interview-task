@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
-import useDropdown from "./hooks/useDropdown";
-import useDropdownStyles from "./hooks/useDropdownStyles";
+import React, { useEffect } from 'react';
+
+import useDropdown from './hooks/useDropdown';
+import useDropdownStyles from './hooks/useDropdownStyles';
 
 type Props = {
   placeholder?: string;
@@ -59,7 +60,12 @@ const Dropdown = ({ placeholder = "select..." }: Props) => {
 
   return (
     <div className={classes.wrapper}>
-      <div className={classes.inputContainer} onClick={handleInputClick}>
+      <div
+        className={`${classes.inputContainer} ${
+          isMenuOpened && classes?.activeInput
+        }`}
+        onClick={handleInputClick}
+      >
         {selectedOption ? selectedOption.label : placeholder}
       </div>
 
@@ -74,7 +80,20 @@ const Dropdown = ({ placeholder = "select..." }: Props) => {
               }`}
               onClick={() => setSelectedOption(option)}
             >
-              {option.label}
+              <span>{option.label}</span>
+
+              {selectedOption?.value === option.value && (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23"
+                  height="23"
+                  fill="#838fc3"
+                  viewBox="0 0 16 16"
+                  className={classes.svgIcon}
+                >
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+              )}
             </div>
           ))}
         </div>
